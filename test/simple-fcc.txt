@@ -1,0 +1,16 @@
+# Counting experiment with multiple channels
+imax *  number of channels
+jmax *  number of backgrounds 
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+shape * FAKE
+------------
+# two channels (0jet and 1jet); 1 observed event in the first, 0 in the second 
+bin            hzz_350GeV  hww_350GeV  hall_350GeV
+observation     1    1    1
+------------
+bin            hzz_350GeV   hzz_350GeV    hww_350GeV    hww_350GeV hall_350GeV hall_350GeV
+process        ZH    bg     ZH     bg    ZH bg
+process         0      1     0     1    0   1
+rate          1.11   1.09  0.32  1.03   1. 2.02
+------------
+signal  lnN     0.1 - 0.1 - 0.1 - ## uncertainty on signal
